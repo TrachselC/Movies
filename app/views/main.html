@@ -1,10 +1,23 @@
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
+  <h1>C'est moi ...</h1>
+
+  <input type="text" ng-model="main.message"></input>
+  <!--<input type="checkbox" ng-model="main.isMessageVisible" />-->
+
+
+<p ng-bind="main.message.length"> </p>
+<ul>
+    <li ng-repeat="el in main.awesomeThings track by $index">{{el}} <button ng-click="main.deleteElement(el, main.awesomeThings)">Delete</button></li>
+</ul>
+
+  <p class="lead" ng-show="main.isMessageVisible()">
+  <!--<p class="lead" ng-show="main.isMessageVisible">-->
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+     <p> {{main.message}}</p>
     Always a pleasure scaffolding your apps.
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <p><a class="btn btn-lg btn-success" ng-click="main.messageCool()">Ajouter<span class="glyphicon glyphicon-ok"></span></a></p>
+  <!--<p><a class="btn btn-lg btn-success" ng-click="message = 'SuperCool!'">Cool!<span class="glyphicon glyphicon-ok"></span></a></p>-->
 </div>
 
 <div class="row marketing">

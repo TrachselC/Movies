@@ -1,13 +1,25 @@
 <div class="jumbotron">
   <h1>C'est moi ...</h1>
 
+{{main.data.movies}}
+
   <input type="text" ng-model="main.message"></input>
   <!--<input type="checkbox" ng-model="main.isMessageVisible" />-->
 
 
 <p ng-bind="main.message.length"> </p>
+<p></p>
+<input type="text" ng-model="maVariable"/>
 <ul>
-    <li ng-repeat="el in main.awesomeThings track by $index">{{el}} <button ng-click="main.deleteElement(el, main.awesomeThings)">Delete</button></li>
+    <li ng-repeat="el in main.data.movies track by $index">{{el}} 
+ <a ng-href="#/d/{{$index}}"> {{el}}</a>
+    <button ng-click="main.deleteElement(el, main.data.movies)">Delete</button></li>
+   
+    <!--<li ng-repeat="el in main.awesomeThings | filter: main.mafonctiontri track by $index">{{el}} <button ng-click="main.deleteElement(el, main.awesomeThings)">Delete</button></li>-->
+
+    <!--<li ng-repeat="el in main.awesomeThings | filter: mafonctiontri track by $index">{{el | uppercase}} <button ng-click="main.deleteElement(el, main.awesomeThings)">Delete</button></li>-->
+    <!--<li ng-repeat="el in main.awesomeThings | filter: maVariable track by $index">{{el}} <button ng-click="main.deleteElement(el, main.awesomeThings)">Delete</button></li>-->
+    <!--<li ng-repeat="el in main.awesomeThings | limitTo: '3' track by $index">{{el}} <button ng-click="main.deleteElement(el, main.awesomeThings)">Delete</button></li>-->
 </ul>
 
   <p class="lead" ng-show="main.isMessageVisible()">
@@ -16,7 +28,7 @@
      <p> {{main.message}}</p>
     Always a pleasure scaffolding your apps.
   </p>
-  <p><a class="btn btn-lg btn-success" ng-click="main.messageCool()">Ajouter<span class="glyphicon glyphicon-ok"></span></a></p>
+  <p><a class="btn btn-lg btn-success" ng-click="main.ajouterElement()">Ajouter<span class="glyphicon glyphicon-ok"></span></a></p>
   <!--<p><a class="btn btn-lg btn-success" ng-click="message = 'SuperCool!'">Cool!<span class="glyphicon glyphicon-ok"></span></a></p>-->
 </div>
 

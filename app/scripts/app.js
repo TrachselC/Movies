@@ -23,10 +23,20 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
+      .when('/about/:unChiffre', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/about/', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
+      })
+      .when('/d/:chiffre', {
+        templateUrl: 'views/demo.html',
+        controller: 'DemoCtrl',
+        controllerAs: 'd'
       })
       .otherwise({
         redirectTo: '/'

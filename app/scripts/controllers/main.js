@@ -8,22 +8,25 @@
  * Controller of the moviesApp
  */
 angular.module('moviesApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function (data) {
     var main = this;
+    main.data = data;
+    
     main.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-    main.messageCool = function(){
+    main.ajouterElement/*messageCool*/ = function(){
       //ajouter texte à la liste
       var main = this;
-      main.awesomeThings.push(main.message);
+      main.data.movies.push(main.message);
       //main.message = 'Hello ' + main.message + ' super cool !';
     };
 
     main.isMessageVisible = function(){
-      return main.message.length % 2 === 0;
+      return 1;
+      //return main.message.length % 2 === 0;
     };
 
     main.deleteElement = function(el, array){
@@ -31,9 +34,14 @@ angular.module('moviesApp')
       var ind = array.indexOf(el);
       array.splice(ind, 1);
   
-      //slice 
-      //index of //--> index
     };
 
     main.message = 'Hello';
+
+    main.mafonctiontri = function(value){
+      if(!isNaN(value)){
+        return Number(value) % 2 === 0;
+      }
+      return false;
+    };
   });

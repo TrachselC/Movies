@@ -1,4 +1,14 @@
-<p>This is the demo view. {{d.c}}
-{{d.data.movies}}
-</p>
-<input ng-model="d.input"> <button ng-click="d.addMovie()"> ADD</button>
+<p>Détails du film </p>
+<p> <b>Index du film : </b> {{films.index}}</p>
+<p><b> Nom film : </b>{{films.data.movies[films.index].name}}</p>
+<p><b>Detail film : </b>{{films.data.movies[films.index].detail}}</p>
+
+
+
+<!--    <p ng-repeat="el in films.data.movies track by $index">
+        <b> Id film : </b>{{el.id}}</br>
+        <b> Nom film : </b>{{el.name}} </br>
+        <b> Detail film : </b>{{el.detail}}</br>
+    </p>-->
+
+<!--<input ng-model="films.input"> <button ng-click="films.addMovie()"> ADD</button>-->

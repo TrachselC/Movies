@@ -1,20 +1,33 @@
 <div class="jumbotron">
-  <h1>C'est moi ...</h1>
+  <h1>Films</h1>
 
-{{main.data.movies}}
 
-  <input type="text" ng-model="main.message"></input>
+<div ng-repeat="movie in main.moviesPopulaire">
+<h2> {{movie.original_title}}</h2>
+<!--{{movies}}-->
+<img ng-src="http://image.tmdb.org/t/p/w185{{movie.poster_path}}"/>
+</div>
+
+<!--{{main.data.movies}}-->
+  <!--<input type="text" ng-model="main.message"></input>-->
+  
+  <!--<input type="text" ng-model="main.filmId" placeholder="id du film"></input>-->
+  <input type="text" ng-model="main.filmName" placeholder="nom du film"></input>
+  <input type="text" ng-model="main.filmDetail" placeholder="detail du film"></input>
+  <button ng-click="main.ajouterElement()">Ajouter</button>
   <!--<input type="checkbox" ng-model="main.isMessageVisible" />-->
 
 
-<p ng-bind="main.message.length"> </p>
+<!--<p ng-bind="main.message.length"> </p>-->
 <p></p>
-<input type="text" ng-model="maVariable"/>
+<!--<input type="text" ng-model="maVariable"/>-->
 <ul>
-    <li ng-repeat="el in main.data.movies track by $index">{{el}} 
- <a ng-href="#/d/{{$index}}"> {{el}}</a>
+    <li ng-repeat="el in main.data.movies track by $index"><!--{{el.name}} -->
+      <a ng-href="#/films/{{$index}}"> {{el.name}}</a>
     <button ng-click="main.deleteElement(el, main.data.movies)">Delete</button></li>
    
+    <!--<li ng-repeat="el in main.data.movies | filter: maVariable track by $index">{{el}}</li>-->
+
     <!--<li ng-repeat="el in main.awesomeThings | filter: main.mafonctiontri track by $index">{{el}} <button ng-click="main.deleteElement(el, main.awesomeThings)">Delete</button></li>-->
 
     <!--<li ng-repeat="el in main.awesomeThings | filter: mafonctiontri track by $index">{{el | uppercase}} <button ng-click="main.deleteElement(el, main.awesomeThings)">Delete</button></li>-->
@@ -22,14 +35,16 @@
     <!--<li ng-repeat="el in main.awesomeThings | limitTo: '3' track by $index">{{el}} <button ng-click="main.deleteElement(el, main.awesomeThings)">Delete</button></li>-->
 </ul>
 
-  <p class="lead" ng-show="main.isMessageVisible()">
-  <!--<p class="lead" ng-show="main.isMessageVisible">-->
+<!--<p> {{main.message}}</p>-->
+
+  <!--<p class="lead" ng-show="main.isMessageVisible()">
+  <p class="lead" ng-show="main.isMessageVisible">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-     <p> {{main.message}}</p>
+     
     Always a pleasure scaffolding your apps.
   </p>
   <p><a class="btn btn-lg btn-success" ng-click="main.ajouterElement()">Ajouter<span class="glyphicon glyphicon-ok"></span></a></p>
-  <!--<p><a class="btn btn-lg btn-success" ng-click="message = 'SuperCool!'">Cool!<span class="glyphicon glyphicon-ok"></span></a></p>-->
+  <p><a class="btn btn-lg btn-success" ng-click="message = 'SuperCool!'">Cool!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
 <div class="row marketing">
@@ -44,5 +59,5 @@
   </p>
 
   <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+  <p>Spectacular Test Runner for JavaScript.</p>-->
 </div>

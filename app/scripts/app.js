@@ -33,10 +33,10 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/d/:chiffre', {
+      .when('/films/:chiffre', {
         templateUrl: 'views/demo.html',
         controller: 'DemoCtrl',
-        controllerAs: 'd'
+        controllerAs: 'films'
       })
       .otherwise({
         redirectTo: '/'

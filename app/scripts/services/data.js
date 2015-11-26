@@ -15,11 +15,11 @@ angular.module('moviesApp')
 
 //setItem --> strigify --> json parse
 
-    this.movies = ['hello', 'world']; 
+    this.movies = [];
 
-    this.addMovie = function (el){
-      this.movies.push(el);
-
+   // this.addMovie = function (el){
+    //  this.movies.push(el);
+      
       //save to localstorage 
-    };
+  //  };
   });

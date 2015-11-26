@@ -3,6 +3,7 @@
 
 
 <div ng-repeat="movie in main.moviesPopulaire">
+<!--class="poster" ng-style="{'background-image': (m|toBackgroundCSS) }"-->
 <h2> {{movie.original_title}}</h2>
 <!--{{movies}}-->
 <img ng-src="http://image.tmdb.org/t/p/w185{{movie.poster_path}}"/>

@@ -81,3 +81,24 @@ body {
     border-bottom: 0;
   }
 }
+
+body {
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.movie{
+  margin-bottom: 2em;
+}
+.movie h2{
+  height: 66px;
+}
+.movie .poster{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 50%;
+  height: 250px;
+}
+.box{
+  background-color: rgba(255,255,255,0.8);
+}
